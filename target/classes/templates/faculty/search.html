@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        <li th:each="faculty : ${faculty}">
+            <span th:text="${faculty.name}"></span> | Department: <span th:text="${faculty.department}"></span>
+        </li>
+    </ul>
+</body>
+</html>

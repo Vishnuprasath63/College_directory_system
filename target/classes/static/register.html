@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+       <link rel="stylesheet" th:href="@{../css/styles.css}">
+</head>
+<body>
+    <div class="container">
+            <div class="message" th:if="${message != null}">
+                <!-- Message will appear here --> 
+                [[${message}]]
+            </div>
+        <h2>Registration Form</h2>
+        <form 
+        th:action="@{/registration}"
+         method="post"
+         role="form"
+         th:object="${user}"
+         >
+         
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input th:field="*{username}" type="username" id="username" name="username" placeholder="Enter Your Username"required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input  th:field="*{email}" type="email" id="email" name="email"  placeholder="Enter Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input  th:field="*{password}" type="password" id="password" name="password"  placeholder="Enter Your Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+            <a href="/login" class="login">login</a>
+        </form>
+    </div>
+</body>
+</html>
