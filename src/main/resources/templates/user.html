@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bar with Actions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-bar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .menu-bar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .menu-bar a:hover {
+            background-color: #575757;
+        }
+
+        .menu-bar .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .menu-bar .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .menu-bar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .menu-bar .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .menu-bar .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .menu-bar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-bar">
+    <a href="#home" onclick="homeAction()">Home</a>
+    <a href="#about" onclick="aboutAction()">About</a>
+    <a href="#services" onclick="servicesAction()">Services</a>
+    <div class="dropdown">
+        <button class="dropbtn">More 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#contact" onclick="contactAction()">Contact</a>
+            <a href="#faq" onclick="faqAction()">FAQ</a>
+        </div>
+    </div> 
+</div>
+
+<script>
+    function homeAction() {
+        alert('You clicked Home!');
+    }
+
+    function aboutAction() {
+        alert('You clicked About!');
+    }
+
+    function servicesAction() {
+        alert('You clicked Services!');
+    }
+
+    function contactAction() {
+        alert('You clicked Contact!');
+    }
+
+    function faqAction() {
+        alert('You clicked FAQ!');
+    }
+</script>
+
+</body>
+</html>

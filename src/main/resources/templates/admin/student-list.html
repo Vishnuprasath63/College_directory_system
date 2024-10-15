@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" th:href="@{../css/styles.css}">
+</head>
+<body>
+    <h2>Student List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example Student data -->
+            <tr>
+                <td>201</td>
+                <td>Jane Smith</td>
+                <td>Engineering</td>
+                <td>
+                    <!-- Remove button for each student -->
+                    <form th:action="@{/admin/student/remove/201}" method="post">
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
